@@ -18,6 +18,18 @@ GROUP BY c.id
 ORDER BY total_spend DESC
 LIMIT 5;
 
+-- =============================================
+-- TASK 2 — Total Revenue by Product Category
+-- =============================================
+
+SELECT
+    p.category,
+    ROUND(SUM(oi.quantity * oi.unit_price), 2) AS total_revenue
+FROM products AS p
+JOIN order_items AS oi
+    ON oi.product_id = p.id
+GROUP BY p.category
+ORDER BY total_revenue DESC;
 
 
 
