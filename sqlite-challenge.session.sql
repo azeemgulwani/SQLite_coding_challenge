@@ -31,6 +31,34 @@ JOIN order_items AS oi
 GROUP BY p.category
 ORDER BY total_revenue DESC;
 
+-- =============================================
+-- TASK 3 — Employees Earning Above Department Average
+-- =============================================
 
+-- Step 1: Compute average salary per department
+-- Step 2: Join employees + departments to those averages
+-- Step 3: Filter to employees whose salary > their department's average
+
+SELECT
+    e.first_name,
+    e.last_name,
+    d.name AS department_name,
+    e.salary AS employee_salary,
+    ROUND(da.dept_avg_salary, 2) AS department_avg
+FROM employees AS e
+JOIN departments AS d
+    ON e.department_id = d.id
+JOIN (
+    SELECT
+        department_id,
+        AVG(salary) AS dept_avg_salary
+    FROM employees
+    GROUP BY department_id
+) AS da
+    ON da.department_id = e.department_id
+WHERE e.salary > da.dept_avg_salary
+ORDER BY
+    department_name,
+    employee_salary DESC;
 
 
