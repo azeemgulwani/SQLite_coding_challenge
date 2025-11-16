@@ -1,0 +1,4 @@
+-- =============================================
+-- Coding Challenge — SQLite Analytics
+-- Tool: Visual Studio Code + SQLTools (SQLite driver)
+-- =============================================
