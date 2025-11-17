@@ -1,4 +1,4 @@
-# Business Insights Summary — SQLite Analytics Challenge
+# Business Insights Summary: SQLite Analytics Challenge
 
 - The highest-spending customer, **Jacob Foster**, contributes over **$8.7k** in lifetime revenue—nearly double the spend of the fifth-highest customer. This shows a highly concentrated revenue distribution driven by a small group of top buyers.
 
