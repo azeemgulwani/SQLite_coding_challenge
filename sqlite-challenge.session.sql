@@ -75,3 +75,19 @@ GROUP BY city
 ORDER BY
     gold_customer_count DESC,
     city ASC;
+
+-- =============================================
+-- TASK 4 EXTENSION — Loyalty Distribution by City
+-- =============================================
+
+SELECT
+    city,
+    loyalty_level,
+    COUNT(*) AS customer_count
+FROM customers
+GROUP BY
+    city,
+    loyalty_level
+ORDER BY
+    city ASC,
+    loyalty_level ASC;
