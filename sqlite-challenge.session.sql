@@ -1,5 +1,9 @@
 -- =============================================
--- Coding Challenge — SQLite Analytics
+-- SQLite Coding Challenge
+-- Tool Used: Visual Studio Code + SQLTools (SQLite Driver)
+-- Validation Method:
+--   - Connected to bais_sqlite_lab.db using SQLTools
+--   - Verified results using SQLTools output panel and table explorer
 -- =============================================
 
 -- =============================================
