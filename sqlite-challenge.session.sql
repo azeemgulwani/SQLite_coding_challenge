@@ -62,3 +62,16 @@ ORDER BY
     employee_salary DESC;
 
 
+-- =============================================
+-- TASK 4 — Cities with the Most Loyal Customers (Gold)
+-- =============================================
+
+SELECT
+    city,
+    COUNT(*) AS gold_customer_count
+FROM customers
+WHERE loyalty_level = 'Gold'
+GROUP BY city
+ORDER BY
+    gold_customer_count DESC,
+    city ASC;
